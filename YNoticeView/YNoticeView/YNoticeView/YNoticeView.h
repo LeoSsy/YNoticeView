@@ -10,13 +10,25 @@
 
 @interface YNoticeView : UIView
 /**
- 初始化方法
+ 初始化方法 通过此方法创建的视图 是有关闭按钮的
  @param frame frame
  @param noticeIcon 公告图标
  @param titles 标题数组 如果需要点击标题跳转 里面可以放我提供的YNoticeModel模型 否则 可以直接放字符串即可
+ @param titleClicked 标题点击的回调
+ @param closeClicked 关闭按钮的点击
+ @return YNoticeView
+ */
+- (instancetype)initWithFrame:(CGRect)frame noticeIcon:(NSString*)noticeIcon titles:(NSArray*)titles titleClicked:(void(^)(NSString* link)) titleClicked closeClicked:(void(^)(void)) closeClicked;
+/**
+ 初始化方法 通过此方法创建的视图 是没有关闭按钮的
+ @param frame frame
+ @param noticeIcon 公告图标
+ @param titles 标题数组 如果需要点击标题跳转 里面可以放我提供的YNoticeModel模型 否则 可以直接放字符串即可
+ @param titleClicked 标题点击的回调
  @return YNoticeView
  */
 - (instancetype)initWithFrame:(CGRect)frame noticeIcon:(NSString*)noticeIcon titles:(NSArray*)titles titleClicked:(void(^)(NSString* link)) titleClicked;
+
 /**公告图标*/
 @property(nonatomic,strong)NSString *noticeIcon;
 /** 标题数组*/

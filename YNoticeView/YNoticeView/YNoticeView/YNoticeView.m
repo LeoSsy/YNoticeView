@@ -50,8 +50,11 @@
 @property(nonatomic,assign)NSInteger currentNum; //记录当前显示的文字下标
 @property(nonatomic,strong)NSArray *titles; /** 标题数组*/
 @property(nonatomic,strong)void(^titleClicked)(NSString *link);//标题点击的回调
+@property(nonatomic,strong)void(^closeClicked)(void);//关闭按钮点击的回调
 @property(nonatomic,strong)NSString *link;//当前显示标题的链接
 @property(nonatomic,assign)BOOL isMoved;//当前标题是否移动完成消失在左侧了
+@property(nonatomic,assign)BOOL isShowCloseBtn;//是否显示右侧的关闭按钮
+
 @end
 
 @implementation YNoticeView
@@ -71,8 +74,22 @@
 
 - (instancetype)initWithFrame:(CGRect)frame noticeIcon:(NSString*)noticeIcon titles:(NSArray*)titles titleClicked:(void(^)(NSString* link)) titleClicked {
     self = [super initWithFrame:frame];
+    self.isShowCloseBtn = false;
+    [self setupWithNoticeIcon:noticeIcon titles:titles titleClicked:titleClicked closeClicked:nil];
+    return self;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame noticeIcon:(NSString*)noticeIcon titles:(NSArray*)titles titleClicked:(void(^)(NSString* link)) titleClicked closeClicked:(void(^)(void)) closeClicked{
+    self = [super initWithFrame:frame];
+    self.isShowCloseBtn = true;
+    [self setupWithNoticeIcon:noticeIcon titles:titles titleClicked:titleClicked closeClicked:closeClicked];
+    return self;
+}
+
+- (void)setupWithNoticeIcon:(NSString*)noticeIcon titles:(NSArray*)titles titleClicked:(void(^)(NSString* link)) titleClicked closeClicked:(void(^)(void)) closeClicked{
     self.backgroundColor =  [UIColor colorWithRed:254/255.0 green:252/255.0 blue:237/255.0 alpha:1.0];
     self.titleClicked = titleClicked;
+    self.closeClicked = closeClicked;
     self.titles = titles;
     self.count = 1;
     self.currentNum = 0;
@@ -99,7 +116,6 @@
     [closeBtn setAdjustsImageWhenHighlighted:NO];
     [self addSubview:closeBtn];
     self.closeBtn = closeBtn;
-    return self;
 }
 
 - (void)layoutSubviews {
@@ -108,6 +124,10 @@
     CGFloat height = self.frame.size.height;
     CGFloat margin = 5;
     CGFloat btnWh = height - margin;
+    if (!self.isShowCloseBtn) {
+        btnWh = 0;
+        self.closeBtn.hidden = YES;
+    }
     CGFloat iconW = self.iconImageV.image.size.width;
     CGFloat iconH = self.iconImageV.image.size.height;
     CGFloat iconY = (height - iconH)*0.5;
@@ -218,6 +238,9 @@
 - (void)closeBtnClick{
     [self.timer invalidate];
     [self removeFromSuperview];
+    if (self.closeClicked) {
+        self.closeClicked();
+    }
 }
 
 @end
