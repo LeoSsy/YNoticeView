@@ -28,7 +28,14 @@
  @return YNoticeView
  */
 - (instancetype)initWithFrame:(CGRect)frame noticeIcon:(NSString*)noticeIcon titles:(NSArray*)titles titleClicked:(void(^)(NSString* link)) titleClicked;
-
+/**动画执行速度多少秒执行一次*/
+@property(nonatomic,assign)CGFloat timeInterval;
+/**标题颜色*/
+@property(nonatomic,strong)UIColor *titleColor;
+/**标题字体大小*/
+@property(nonatomic,assign)CGFloat titleFontSize;
+/**每个标题之间的间距*/
+@property(nonatomic,assign)CGFloat titleMargin;
 /**公告图标*/
 @property(nonatomic,strong)NSString *noticeIcon;
 /** 标题数组*/

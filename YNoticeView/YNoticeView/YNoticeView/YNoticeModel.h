@@ -12,6 +12,8 @@
 @property(nonatomic,strong)NSString *icon;
 /**显示文本 */
 @property(nonatomic,strong)NSString *title;
+/**显示文本的颜色 */
+@property(nonatomic,strong)UIColor *titleColor;
 /**点击跳转链接 */
 @property(nonatomic,strong)NSString *link;
 @end

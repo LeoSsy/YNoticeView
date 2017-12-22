@@ -13,6 +13,7 @@
 		2A4BB6301FE91D40005A657D /* YNoticeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A4BB62C1FE91D40005A657D /* YNoticeView.m */; };
 		2A4BB6311FE91D40005A657D /* YNoticeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A4BB62C1FE91D40005A657D /* YNoticeView.m */; };
 		2A4BB6321FE91D40005A657D /* YNoticeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A4BB62C1FE91D40005A657D /* YNoticeView.m */; };
+		2A53FD461FEC9B0C00511041 /* UILabel+Y.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A53FD451FEC9B0C00511041 /* UILabel+Y.m */; };
 		2A95A47E1FE7AB23006331C3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A95A47D1FE7AB23006331C3 /* AppDelegate.m */; };
 		2A95A4811FE7AB23006331C3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A95A4801FE7AB23006331C3 /* ViewController.m */; };
 		2A95A4841FE7AB23006331C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A95A4821FE7AB23006331C3 /* Main.storyboard */; };
@@ -45,6 +46,8 @@
 		2A4BB62A1FE91D40005A657D /* YNoticeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YNoticeModel.m; sourceTree = "<group>"; };
 		2A4BB62B1FE91D40005A657D /* YNoticeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YNoticeView.h; sourceTree = "<group>"; };
 		2A4BB62C1FE91D40005A657D /* YNoticeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YNoticeView.m; sourceTree = "<group>"; };
+		2A53FD441FEC9B0C00511041 /* UILabel+Y.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+Y.h"; sourceTree = "<group>"; };
+		2A53FD451FEC9B0C00511041 /* UILabel+Y.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Y.m"; sourceTree = "<group>"; };
 		2A95A4791FE7AB23006331C3 /* YNoticeView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YNoticeView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A95A47C1FE7AB23006331C3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2A95A47D1FE7AB23006331C3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -95,6 +98,8 @@
 				2A4BB62A1FE91D40005A657D /* YNoticeModel.m */,
 				2A4BB62B1FE91D40005A657D /* YNoticeView.h */,
 				2A4BB62C1FE91D40005A657D /* YNoticeView.m */,
+				2A53FD441FEC9B0C00511041 /* UILabel+Y.h */,
+				2A53FD451FEC9B0C00511041 /* UILabel+Y.m */,
 			);
 			path = YNoticeView;
 			sourceTree = "<group>";
@@ -289,6 +294,7 @@
 			files = (
 				2A95A4811FE7AB23006331C3 /* ViewController.m in Sources */,
 				2A4BB62D1FE91D40005A657D /* YNoticeModel.m in Sources */,
+				2A53FD461FEC9B0C00511041 /* UILabel+Y.m in Sources */,
 				2A4BB6301FE91D40005A657D /* YNoticeView.m in Sources */,
 				2A95A48C1FE7AB23006331C3 /* main.m in Sources */,
 				2A95A47E1FE7AB23006331C3 /* AppDelegate.m in Sources */,
