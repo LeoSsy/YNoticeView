@@ -19,8 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //"sddsjf从 v 的送饭的是方式对方的送方式发送发第三sddsjf从 v 的送饭的是方式对方的送方式发送发第三sddsjf从 v 的送饭的是方式对方的送方式发送发第三sddsjf从 v 的送饭的是方式对方的送方式发送发第三sddsjf从 v 的送饭的是方式对方的送方式发送发第三 888
-   _noticeView = [[YNoticeView alloc] initWithFrame:CGRectMake(0, 100, self.view.bounds.size.width, 40) noticeIcon:@"notice" titles:@[@" 888",@"2222sddsjf从 v 的送饭的是方式对方的送方"] titleClicked:^(NSString *link) {
+   _noticeView = [[YNoticeView alloc] initWithFrame:CGRectMake(0, 100, self.view.bounds.size.width, 40) noticeIcon:@"notice" titles:@[@" 123666sddsjf从 v 的送饭的是方式对方的送方式发送发第三sddsjf从 v 的送饭的是方式对方的送方式发送发第三sddsjf从 v 的送饭的是方式对方的送方式发送发第三sddsjf从 v 的送饭的是方式对方的送方式发送发第三sddsjf从 v 的送饭的是方式对方的送方式发送发第三 888",@"2222sddsjf从 v 的送饭的是方式对方的送方"] titleClicked:^(NSString *link) {
                 NSLog(@"linklinklink%@",link);
      }];
     [self.view addSubview:_noticeView];
